@@ -1,4 +1,4 @@
-# :ramen: 🧮 miso-mathjax
+# :ramen: 🧮 mathjax
 
 An example integration of [miso](https://github.com/dmjio/miso) and [MathJAX](https://www.mathjax.org/).
 
