@@ -33,13 +33,13 @@ type Model = ()
 app :: App Model Action
 app = component () updateModel viewModel
 -----------------------------------------------------------------------------
-updateModel :: Action -> Effect ROOT props Model Action
+updateModel :: Action -> Effect context props Model Action
 updateModel = \case
   InitMathJAX domRef -> io_
     [js| MathJax.typesetPromise([${domRef}]).then(() => { console.log('typeset!'); }); |]
 -----------------------------------------------------------------------------
-viewModel :: props -> () -> View Model Action
-viewModel _ () = vfrag
+viewModel :: context -> props -> () -> View context Model Action
+viewModel _ _ () = vfrag
   [ h2_
     [ CSS.style_
       [ CSS.fontFamily "monospace"
