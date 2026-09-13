@@ -38,8 +38,8 @@ updateModel = \case
   InitMathJAX domRef -> io_
     [js| MathJax.typesetPromise([${domRef}]).then(() => { console.log('typeset!'); }); |]
 -----------------------------------------------------------------------------
-viewModel :: context -> props -> () -> View context Model Action
-viewModel _ _ () = vfrag
+viewModel :: () -> View context props Model Action
+viewModel () = vfrag
   [ h2_
     [ CSS.style_
       [ CSS.fontFamily "monospace"
