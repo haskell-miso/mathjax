@@ -4,6 +4,9 @@ packages:
 allow-newer:
   all:base
 
+constraints:
+  aeson >= 2
+
 flags: +template-haskell
 
 source-repository-package
